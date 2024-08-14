@@ -12,14 +12,15 @@ with open(filename, 'rt') as spt:
     classLabels = spt.read().rstrip('\n').split('\n')
     
     
-model.setInputSize(320, 320)  #greater this value better the reults but slower. Tune it for best results
+model.setInputSize(198, 198)  #greater this value better the reults but slower. Tune it for best results
 model.setInputScale(1.0/127.5)
 model.setInputMean((127.5, 127.5, 127.5))
 model.setInputSwapRB(True)
 
     
 cap = cv2.VideoCapture(0)
-
+print("CV_CAP_PROP_FRAME_WIDTH: '{}'".format(cap.get(cv2.CAP_PROP_FRAME_WIDTH))) 
+print("CV_CAP_PROP_FRAME_HEIGHT : '{}'".format(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))) 
 font = cv2.FONT_HERSHEY_PLAIN
 # used to record the time when we processed last frame 
 prev_frame_time = 0
