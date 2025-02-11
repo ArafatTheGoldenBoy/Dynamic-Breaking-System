@@ -29,7 +29,7 @@ import pygame
 import numpy as np
 import random
 import math
-from pygame.locals import K_UP, K_DOWN, K_LEFT, K_RIGHT, K_ESCAPE, K_a
+from pygame.locals import K_UP, K_DOWN, K_LEFT, K_RIGHT, K_ESCAPE, K_a, K_q
 
 # Global variable to store the latest camera image as a pygame Surface
 image_surface = None
@@ -125,8 +125,10 @@ def main():
                 control.brake = 1.0
             if keys[K_LEFT]:
                 control.steer = -0.5
-            elif keys[K_RIGHT]:
+            if keys[K_RIGHT]:
                 control.steer = 0.5
+            elif keys[K_q]:
+                control.reverse = True
             vehicle.apply_control(control)
 
         # Update the third-person camera to follow the vehicle
