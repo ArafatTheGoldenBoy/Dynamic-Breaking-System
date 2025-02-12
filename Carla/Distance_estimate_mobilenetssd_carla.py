@@ -1,6 +1,18 @@
 from __future__ import print_function
 
 # ==============================================================================
+# -- Download Mobilenetssd model from Githubs ---------------------------------------------------------
+# ==============================================================================
+import urllib.request
+
+# URLs for the model files (note the ?raw=true to get the raw content)
+url_pb = "https://github.com/ArafatTheGoldenBoy/Dynamic-Breaking-System/blob/main/Carla/frozen_inference_graph.pb?raw=true"
+url_pbtxt = "https://github.com/ArafatTheGoldenBoy/Dynamic-Breaking-System/blob/main/Carla/ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt?raw=true"
+
+# Download the files to the current directory
+urllib.request.urlretrieve(url_pb, "frozen_inference_graph.pb")
+urllib.request.urlretrieve(url_pbtxt, "ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt")
+# ==============================================================================
 # -- find carla module ---------------------------------------------------------
 # ==============================================================================
 import glob
