@@ -1,0 +1,5 @@
+What else should I add or keep in mind for this thesis later?
+  Add a safety buffer to the self-driving car so it never crosses into or hits detected objects. But if the only thing it detects is a pedestrian, it should decide on its own to move as close to the pedestrian as safely possible. 
+  That means, in that case, it should change the buffer range to the minimum. This is necessary because if there is a gap between the vehicle and the pedestrian, a cyclist could enter the space, proceed ahead, and block the vehicle’s path.
+
+  
