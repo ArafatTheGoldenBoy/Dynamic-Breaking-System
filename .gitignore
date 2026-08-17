@@ -6,3 +6,19 @@ yolov10/
 # Python bytecode
 __pycache__/
 *.py[cod]
+
+# Pretrained YOLO checkpoints - ultralytics downloads these on first use.
+# best.pt is deliberately NOT ignored: it is trained from custom_dataset/.
+yolov10n.pt
+yolov10s.pt
+yolov10m.pt
+yolov10b.pt
+yolov10x.pt
+yolo12n.pt
+
+# Generated detection output
+Object_Detection_with_MobileNet/video.avi
+
+# Unused sample footage (video3.mp4 is kept - the tracking scripts read it)
+video2.MOV
+videoplayback.mp4
